@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="json.css">
+  <!-- Підключення бібліотеки jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="main-container">
+    <h2 class="section-title">Search:</h2>
+    
+    <!-- Форма пошуку -->
+    <div class="search-box">
+      <div class="form-row">
+        <label for="titleInput">Title:</label>
+        <input type="text" id="titleInput" placeholder="Enter title...">
+      </div>
+      
+      <div class="form-row">
+        <label for="typeSelect">Type:</label>
+        <select id="typeSelect">
+          <option value="movie">Movie</option>
+          <option value="series">Series</option>
+          <option value="episode">Episode</option>
+        </select>
+      </div>
+
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Блок із результатами -->
+    <div id="resultsSection" style="display: none;">
+      <h2 class="section-title">Films:</h2>
+      <div id="moviesList" class="movies-grid"></div>
+      <div id="pagination" class="pagination-container"></div>
+    </div>
+
+    <!-- Повідомлення, якщо фільмів не знайдено -->
+    <div id="notFoundMsg" class="not-found-msg" style="display: none;">
+      Movie not found!
+    </div>
+
+    <!-- Блок із детальною інформацією про фільм -->
+    <div id="detailsSection" style="display: none;">
+      <h2 class="section-title">Film info:</h2>
+      <div id="movieDetails" class="details-box"></div>
+    </div>
+  </div>
+
+  <script src="json.js"></script>
+</body>
+</html>
